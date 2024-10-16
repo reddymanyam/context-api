@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
-import Signin from './components/Signin'
-import Profile from './components/Profile'
+import React from 'react';
+import { UserProvider } from './components/UserContext';
+import Signin from './components/Signin';
+import Profile from './components/Profile';
 
 const App = () => {
-  const [displayname, setDisplayname] = useState("");
-
   return (
-      
-    <>
-       <Signin setDisplayname={setDisplayname}/>
-       <Profile displayname={displayname}/>
-    </>
-  )
+    <UserProvider>
+      <Signin />
+      <Profile />
+    </UserProvider>
+  );
 }
 
-export default App
+export default App;

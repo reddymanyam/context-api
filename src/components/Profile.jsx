@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { UserContext } from './UserContext';
 
-const Profile = ({displayname}) => {
-  return (
-   <>
-      <h3>username is :{displayname}</h3>
-   </>
-  )
+const Profile = () => {
+    const { displayname } = useContext(UserContext); 
+
+    return (
+        <>
+            <h3>Username is: {displayname ? displayname : "No username entered"}</h3>
+        </>
+    );
 }
 
-export default Profile
+export default Profile;
