@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserProvider } from './components/UserContext';
+import UserProvider  from "./contex/UserContex"
 import Signin from './components/Signin';
 import Profile from './components/Profile';
 
